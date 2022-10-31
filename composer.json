@@ -1,5 +1,5 @@
 {
-    "name": "y-ui/laravel-running-time",
+    "name": "seasidecrab/laravel-running-time",
     "description": "A request execution time statistics tools with Laravel",
     "type": "library",
     "license": "MIT",
@@ -13,7 +13,7 @@
     },
     "authors": [
         {
-            "name": "刘正伟"
+            "name": "刘正伟、JasonLi"
         }
     ],
     "autoload": {

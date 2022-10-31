@@ -55,7 +55,8 @@ class RunningTimeCommand extends Command
         ini_set('memory_limit', config('runningtime.memory_limit', '128M'));
         $st = microtime(true);
 
-        $options = $this->options();
+        // 兼容 5.3 以下用法
+        $options = app()::VERSION >= '5.3' ? $this->options() : $this->option();
 
         $this->line = $options['line'] ?? 10;
         try {

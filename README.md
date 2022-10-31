@@ -7,17 +7,30 @@
 
 ![Image](https://github.com/y-ui/y-ui.github.io/blob/master/table-20190815.png)
 
+## update
+
+兼容 5.3 以下用法
+
+```php
+$options = app()::VERSION >= '5.3' ? $this->options() : $this->option();
+```
+
 ## Installation
 
-    composer require y-ui/laravel-running-time ^1.1
+    composer require seasidecrab/laravel-running-time
     
 ## Configuration
-    
+
 1. Open your `app/Http/Kernel.php` and add the following to `$middleware` array:
 
     ```php
     \RunningTime\Middleware\RunningTimeMiddleware::class,
     ```
+   Open your `config/app.php` and the following to `providers` array:
+
+   ```php
+   App\Providers\EquipmentServiceProvider::class,
+   ```
  
 2. Run the command below to publish the package config file `config/runningtime.php`:
  
