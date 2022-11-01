@@ -29,7 +29,7 @@ $options = app()::VERSION >= '5.3' ? $this->options() : $this->option();
    Open your `config/app.php` and the following to `providers` array:
 
    ```php
-   App\Providers\EquipmentServiceProvider::class,
+   RunningTime\RunningTimeServiceProvider::class,
    ```
  
 2. Run the command below to publish the package config file `config/runningtime.php`:
