@@ -17,7 +17,7 @@ $options = app()::VERSION >= '5.3' ? $this->options() : $this->option();
 
 ## Installation
 
-    composer require seasidecrab/laravel-running-time dev-master
+    composer require seasidecrab/laravel-running-time ^1.1
     
 ## Configuration
 
