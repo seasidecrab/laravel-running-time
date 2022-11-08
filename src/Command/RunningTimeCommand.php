@@ -64,7 +64,7 @@ class RunningTimeCommand extends Command
             $this->end = $this->option('end') ? (new \DateTime($options['end'])) : (new \DateTime());
         } catch (\Exception $exception) {
             preg_match('/__construct\(\): (.*?) at/', $exception->getMessage(), $match);
-            $this->error($match[1] ?? 'Invalid date format');
+            $this->error(empty($match[1]) ? 'Invalid date format' : $match[1]);
             return;
         }
 
